@@ -1,0 +1,202 @@
+@import "node_modules/open-props/open-props.min.css";
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main>nav {
+    width: clamp(360px, 90vw, 1200px);
+}
+
+.product-page {
+    width: clamp(360px, 90vw, 1200px);
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    flex-wrap: wrap;
+}
+
+.product-images {
+    flex: 1 0 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.product-images>img {
+    width: 90%;
+}
+
+.product-list-image {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.product-list-image>button {
+    width: 4em;
+}
+
+.product-list-image>button>img {
+    width: 100%;
+}
+
+.product-information {
+    flex: 1 1 360px;
+}
+
+.product-information>* {
+
+    margin-bottom: 1em;
+
+}
+
+.product-name>* {
+    padding-bottom: 0.5em;
+}
+
+.product-characteristic {
+    padding: 0.5em 1em;
+    border: black 1px solid;
+    border-radius: var(--radius-3);
+}
+
+.product-characteristic>ul {
+    margin: 0;
+}
+
+.product-review {
+    display: flex;
+    width: clamp(360px, 70%, 1200px);
+    justify-content: space-between;
+}
+
+.rating-color {
+    color: #fbc634 !important;
+}
+
+.size-card {
+    display: flex;
+    align-items: center;
+    border: var(--gray-4) 1px solid;
+    border-radius: var(--radius-2);
+    width: 80px;
+    box-shadow: var(--shadow-4);
+    padding: 0.5em 0.25em;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.size-card>img {
+    width: 80%;
+    padding: auto;
+}
+
+.size-grid {
+    display: grid;
+    grid-auto-columns: 80px;
+    grid-auto-flow: column;
+    overflow: auto;
+    gap: 0.5em;
+}
+
+.product-price>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+
+.product-price>.price {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.product-price .counter {
+    flex: 1 0 60px;
+    display: flex;
+}
+
+.product-price .counter input {
+    padding: 0;
+    min-width: 2em;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.button-add-cart {
+    flex: 2 0 300px;
+    width: 100%;
+    padding: 0.25em;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: var(--radius-2);
+    background-color: var(--green-6);
+    border: var(--green-6) 2px solid;
+    color: white;
+}
+
+.button-add-cart:hover {
+    background-color: white;
+    color: var(--green-6);
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-body {
+    padding: 1em;
+}
+
+.accordion-body p {
+    margin: 1em;
+}
+
+.product-description {
+    width: clamp(360px, 90vw, 1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-description .accordion-item>.accordion-header>.accordion-button {
+    background-color: white;
+    border-bottom: var(--gray-4) 1px solid;
+}
+
+.product-description .accordion>.accordion-item {
+    border: none;
+
+}
+
+.product-description .accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.ingredient-card {
+    width: 12em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ingredient-card img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--gray-4);
+    margin: 1em;
+}
+
+.ingredient-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+}
