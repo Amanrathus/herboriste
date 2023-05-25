@@ -1,4 +1,4 @@
-@import "node_modules/open-props/open-props.min.css";
+@import "https://unpkg.com/open-props";
 
 main {
 
@@ -94,6 +94,11 @@ main>nav {
 .size-card>img {
     width: 80%;
     padding: auto;
+}
+.size-card.active,
+.size-card:hover {
+    border-color: var(--green-6);
+    border-width: 2px;
 }
 
 .size-grid {
