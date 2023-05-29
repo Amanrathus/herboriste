@@ -1,104 +1,58 @@
-@import "https://unpkg.com/open-props";
-
-
-
-
-.scroll-list {
-    padding: 0;
-    width: clamp(360px, 85vw, 1200px);
-    gap: 1em;
-    display: grid;
-    grid-auto-flow: column;
-    text-align: justify;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    margin: 1em;
-
-
+.width-limited {
+    width: clamp(360px, 90vw, 1200px);
 }
 
-.scroll-list::-webkit-scrollbar {
-    height: 12px;
+main,
+.section-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
-
-.scroll-list::-webkit-scrollbar-thumb,
-.scroll-list::-webkit-scrollbar-track {
-    border-radius: 92px;
-}
-
-.scroll-list::-webkit-scrollbar-thumb {
-    background: var(--green-7);
-}
-
-.scroll-list::-webkit-scrollbar-track {
-    background: var(--green-3);
-}
-
-@media (min-width: 600px) {
-    .scroll-list {
-        grid-auto-columns: calc(calc(100%/2) - 0.51em);
-    }
-}
-
-@media (width<600px) {
-    .scroll-list {
-        width: 95vw;
-        grid-auto-columns: calc(calc(100%/2) - 0.51em);
-    }
-}
-
-@media (min-width: 900px) {
-    .scroll-list {
-        grid-auto-columns: calc(calc(100%/3) - 0.67em);
-    }
-}
-
-@media (min-width: 1200px) {
-    .scroll-list {
-        grid-auto-columns: calc(calc(100%/4) - 0.76em);
-    }
-}
-
-
-
-.card:hover {
-    box-shadow: var(--shadow-6);
-}
-
-.card>img:hover {
-    transform: scale(115%);
-    filter: contrast(105%);
-    filter: brightness(105%);
-}
-
-.card {
-    overflow: hidden;
-    transition: all 0.6s;
-    scroll-snap-align: end;
-}
-
-.card>img {
-    transition: all 1s;
-}
-
-.card a {
-    text-decoration: none;
-}
-
-.card-text {
-    color: gray;
-    padding-top: 1em;
-}
-
-.card .btn-primary:hover {
-    color: var(--bs-primary);
-    background-color: white;
-    border-width: 2px;
-}
-
-.scroll-title {
+#carousel-index {
     width: 100%;
-    border-bottom: 1px var(--gray-4) solid;
-    padding: 1em;
-    margin-bottom: 1em;
 }
+
+.nav.tab-navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    border-bottom: solid 1px var(--gray-2);
+}
+
+.nav.tab-navigation>a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1em;
+
+}
+
+.nav.tab-navigation>a>div {
+    font-size: 1.25em;
+    text-align: center;
+    color: black;
+}
+
+.nav.tab-navigation>.active>div {
+    color: var(--green-7);
+    border-bottom: solid 2px var(--green-7);
+}
+
+#carousel-index {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+#carousel-index div {
+    height: 100%;
+    width: 100%;
+}
+
+#carousel-index .carousel img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
